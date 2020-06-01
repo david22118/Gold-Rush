@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GoldRush</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" type="text/css" />
+  </head>
+  <body>
+    
+    
+    <div class="container">
+    
+<div id="top" class="row">
+
+ <div id="rows" class="col s4 m4 l4"><input id="input1" type="text" placeholder="rows"></input></div>
+          <div id="colums" class="col s4 m4 l4"><input id="input2" type="text" placeholder="colums"></input></div>
+          <div id="button" class="col s4 m4 l4"><a class="btn-small waves-effect black ">Start </a>
+       </div> 
+</div>
+
+      <div class="section">
+       
+         <div id="start" class="row">
+          
+    </div> 
+        
+      </div>
+      
+       <div id="results" class="row"></div>
+      
+      
+    </div>
+    
+    <script id="matrix-template" type="text/x-handlebars-template">
+      
+      {{#each goldRush}}
+    <div id="row1" class="row"> 
+        {{#each this}}
+          <div class="in" class="col s0.2 m0.2 l0.2">
+            {{#iff this '==' 'android'}}
+              <i id="android" class="material-icons">android</i> 
+              {{/iff}}
+              {{#iff this '==' 'tablet_mac'}}
+              <i id="tablet_mac" class="material-icons">tablet_mac</i> 
+              {{/iff}}
+              {{#iff this '==' 'tag_faces'}}
+              <i id="tag_faces" class="material-icons">tag_faces</i> 
+              {{/iff}}
+              {{#iff this '==' 'X'}}
+              <div class="bank"><i id="tax" class="material-icons" >account_balance</i></div> 
+              {{/iff}}
+              {{#iff this '==' '.'}}
+              <i id="dot" class="material-icons"></i> 
+            {{/iff}}
+          </div>
+        {{/each}}
+      </div> 
+      {{/each}}
+      
+        
+      
+    </script>
+   
+    <script id="score-template" type="text/x-handlebars-template">
+       <div id="score" class="row"> 
+        <div id="score1" class="col s6 m6 l6" >
+      <i id="mac" class="material-icons pulse">tablet_mac</i><label class="lmac">{{players.player1}}</label>
+      </div>
+     <!-- <div id="start" class="col s4 m4 l4">
+      <button class="button">start</button>
+     </div> -->
+      <div id="score2" class="col s4 m4 l4" >
+      <label class="landroid">{{players.player2}}</label><i id="and" class="material-icons pulse">android</i>
+      </div>
+   </div>
+    
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
+    <script src="Matrix.js"></script>
+    <script src="GoldRush.js"></script>
+    <script src="Renderer.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
