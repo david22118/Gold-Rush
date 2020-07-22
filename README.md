@@ -35,7 +35,7 @@ players move through keyboard keys: arrows and waxd keys.
 <p align="center"><img src="Screenshots/game.png" width="300" /></p>
 
 ## Techstack
-1. Jquery Material-UI handelbars,matrix data structure.
+1. Jquery ,material design, handelbars,matrix data structure.
 
 ## TODO
 1. Allow for mutiple clients to play against each other (not only on the same computer) using Socket IO.
